@@ -7,7 +7,6 @@ $(document).ready(function(){
       url: 'https://quotes.stormconsultancy.co.uk/random.json',
       dataType: 'json',
       success: function(response) {
-        console.log('success', response.quote);
         quote = response.quote;
         author = response.author;
         $('#quote').text('“' + quote + '”');
