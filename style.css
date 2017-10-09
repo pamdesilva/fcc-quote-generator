@@ -5,27 +5,12 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  background: #fa6e59;
+  background: url(https://images.pexels.com/photos/129105/pexels-photo-129105.jpeg?w=940&h=650&auto=compress&cs=tinysrgb) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   height: 100vh;
-}
-
-h1 {
-  color: white;
-  padding-bottom: .3em;
-  text-align: left;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3em;
-  line-height: 1.5em;
-}
-
-.fa-laptop {
-  font-size: 1.3em;
-  margin-left: 14px;
-}
-
-.fa-flask {
-  font-size: 1.1em;
-  margin-left: 14px;
 }
 
 .container {
@@ -38,39 +23,43 @@ h1 {
 }
 
 .box-content {
-  flex-direction: row;
+  background: rgba(34, 89, 78, 0.2);
+  padding: 2em;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  border: 2px solid rgba(34, 89, 78, 0.05);
 }
 
 #quote {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Signika', sans-serif;
   margin-bottom: .8em;
-  font-size: 3em;
+  font-size: 2.8em;
   color: white;
 }
 
 #author {
-  font-family: 'Courgette', cursive;
+  font-family: 'Inconsolata', monospace;
   font-size: 1.8em;
   color: white;
-  margin-bottom: 1.2em;
 }
 
 button {
-  background: #4897d8;
+  background: white;
   /*background: rgba(255,255,255,0.7);*/
   padding: .8em;
   margin-bottom: .3em;
   margin-right: .5em;
   border-radius: 10px;
   border: none;
-  color: white;
+  color: tomato;
   font-family: 'Inconsolata', monospace;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 button:hover {
   background-image:none;
-  background-color: #ffdb5c;
+  background-color: #4897d8;
   color: white;
 }
 

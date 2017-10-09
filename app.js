@@ -2,13 +2,13 @@ $(document).ready(function(){
   var quote;
   var author;
 
-  function getNewQuote() {
+  function generateQuote() {
     $.ajax({
-      url: 'https://quotes.stormconsultancy.co.uk/random.json',
-      dataType: 'json',
+      url: 'https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?',
+      dataType: 'jsonp',
       success: function(response) {
-        quote = response.quote;
-        author = response.author;
+        quote = response.quoteText;
+        author = response.quoteAuthor;
         $('#quote').text('“' + quote + '”');
         if(author) {
           $('#author').text('– ' + author);
@@ -19,16 +19,15 @@ $(document).ready(function(){
     });
   }
 
-  getNewQuote();
+  generateQuote();
 
   $('#next-quote').click(function(e){
     e.preventDefault();
-    getNewQuote();
+    generateQuote();
   });
 
   $('#tweet-quote').click(function(e){
     e.preventDefault();
-    console.log('Tweet me');
       window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(quote + ' – ' + author));
   });
 
